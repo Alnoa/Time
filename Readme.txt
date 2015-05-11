@@ -1,33 +1,29 @@
-Readme file for Arduino Time Library
+Readme file pour la bibliothèque Arduino "Time"
 
-Time is a library that provides timekeeping functionality for Arduino.
+Time est une bibliothèque qui fournit des fonctions de gestion du temps pour Arduino.
 
-The code is derived from the Playground DateTime library but is updated
-to provide an API that is more flexable and easier to use.
+Le code est tiré de la bibliothèque DateTime , mais mise à jour pour fournir une API  plus flexible et plus facile à utiliser.
 
-A primary goal was to enable date and time functionality that can be used with
-a variety of external time sources with minimum differences required in sketch logic.
+Le but principal(primaire) était de permettre la fonctionnalité des dates et heures qui peuvent être utilisée avec une variété de sources de temps externes avec des différences minimales exigées dans la logique de croquis(sketch).
 
-Example sketches illustrate how similar sketch code can be used with: a Real Time Clock,
-internet NTP time service, GPS time data, and Serial time messages from a computer
-for time synchronization.
+Les croquis(sketches) d'exemple illustrent comment le code de croquis(sketch) semblable peut être utilisé avec : Modules RTC,service de temps Internet NTP , données de temps GPS et messages de temps En liasion série d'un ordinateur pour synchronisation de temps.
 
-The functions available in the library include:
+Les fonctions disponibles dans la bibliothèque incluent :
 
-hour();            // the hour now  (0-23)
-minute();          // the minute now (0-59)          
-second();          // the second now (0-59) 
-day();             // the day now (1-31)
-weekday();         // day of the week, Sunday is day 0 
-month();           // the month now (1-12)
-year();            // the full four digit year: (2009, 2010 etc) 
+hour();            // heure actuelle  (0-23)
+minute();          // minute actuelle (0-59)          
+second();          // seconde actuelle (0-59) 
+day();             // jour actuel (1-31)
+weekday();         // jour de la semaine, dimanche = 0 
+month();           // mois actuel (1-12)
+year();            // année actuel: (2009, 2010 etc) 
 
-there are also functions to return the hour in 12 hour format
-hourFormat12();    // the hour now in 12 hour format
-isAM();            // returns true if time now is AM 
-isPM();            // returns true if time now is PM
+fonctions liées au format sur 12h
+hourFormat12();    // renvois l'heure actuelle au format 12h
+isAM();            // renvois true si le temps definis est le matin
+isPM();            // renvois true si le temps definis est l'apres-midi
 
-now();             // returns the current time as seconds since Jan 1 1970 
+now();             // renvois le temps actuel en seconde depuis 1970
 
 The time and date functions can take an optional parameter for the time. This prevents
 errors if the time rolls over between elements. For example, if a new minute begins
